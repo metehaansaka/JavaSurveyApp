@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="271.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="surveyapp.SignUpController">
+    <children>
+        <Button fx:id="signUp" layoutX="570.0" layoutY="612.0" onAction="#signUp" prefHeight="40.0" prefWidth="124.0" text="Sign Up" />
+      <TextField fx:id="password" layoutX="536.0" layoutY="246.0" prefHeight="40.0" prefWidth="208.0" />
+      <Label layoutX="460.0" layoutY="257.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="536.0" layoutY="303.0" prefHeight="40.0" prefWidth="208.0" />
+      <Label layoutX="437.0" layoutY="314.0" text="E-Mail Address">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="388.0" layoutY="70.0" prefHeight="58.0" prefWidth="504.0" text="Sign Up to Survey System">
+         <font>
+            <Font name="Franklin Gothic Demi" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="536.0" layoutY="187.0" prefHeight="40.0" prefWidth="208.0" />
+      <Label layoutX="460.0" layoutY="198.0" text="Username">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phone" layoutX="536.0" layoutY="364.0" prefHeight="40.0" prefWidth="208.0" />
+      <Label layoutX="437.0" layoutY="375.0" text="Phone Number">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="545.0" layoutY="485.0" prefHeight="17.0" prefWidth="35.0" text="I am :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="customer" layoutX="588.0" layoutY="450.0" mnemonicParsing="false" text="Customer">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="manager" layoutX="588.0" layoutY="485.0" mnemonicParsing="false" text="Manager/HR" toggleGroup="$userType" />
+      <RadioButton fx:id="employe" layoutX="588.0" layoutY="522.0" mnemonicParsing="false" text="Employee" toggleGroup="$userType" />
+      <ImageView fx:id="backButton" fitHeight="48.0" fitWidth="48.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/back_signUp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorLabel" layoutX="460.0" layoutY="138.0" text="Bir Hata Oluştu Tekrar Deneyiniz" textFill="#e11313" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
